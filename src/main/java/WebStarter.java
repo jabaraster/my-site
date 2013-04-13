@@ -1,4 +1,4 @@
-import jabara.jetty_memcached.MemcachedSessionServerStarter;
+import jabara.jetty.ServerStarter;
 
 /**
  * @author jabaraster
@@ -9,7 +9,7 @@ public class WebStarter {
      * @param pArgs
      */
     public static void main(final String[] pArgs) {
-        final MemcachedSessionServerStarter starter = new MemcachedSessionServerStarter();
+        final ServerStarter starter = new ServerStarter();
         starter.setWebPort(8081);
         starter.start();
     }

@@ -29,12 +29,6 @@
 			<artifactId>jabara-jetty</artifactId>
 			<version>1.0.2</version>
 		</dependency>
-		<!-- Jettyでセッションレプリケーションを実現するためのライブラリ. Memcachedを利用したHttpSession実装を提供 -->
-		<dependency>
-			<groupId>jabaraster</groupId>
-			<artifactId>jabara-jetty-memcached</artifactId>
-			<version>1.0</version>
-		</dependency>
 	</dependencies>
 	<build>
 		<finalName>my-site</finalName>
@@ -109,6 +103,12 @@
 		</plugins>
 	</build>
 	<repositories>
+        <!-- jetty-nosql-memcachedを使うためにローカルディレクトリをmavenリポジトリとして参照する -->
+        <!-- https://github.com/yyuu/jetty-nosql-memcached -->
+        <repository>
+            <id>project.local</id>
+            <url>file://${project.basedir}/files/repo</url>
+        </repository>
 		<!-- 河野作成ライブラリのリポジトリ -->
 		<repository>
 			<id>jabaraster's repository</id>
