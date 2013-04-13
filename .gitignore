@@ -1,3 +1,10 @@
 target
 src/main/webapp/WEB-INF/classes
+
 *.swp
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
